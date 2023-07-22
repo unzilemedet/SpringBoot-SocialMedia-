@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: clusterip-elasticsearch
+spec:
+  selector:
+    app: elasticsearch
+  type: ClusterIP
+  ports:
+    - name: elasticsearch
+      port: 9200
+      targetPort: 9200
+    - name: elasticsearchmanagement
+      port: 9300
+      targetPort: 9300

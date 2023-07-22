@@ -1,0 +1,31 @@
+server:
+  port: 8070
+
+spring:
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: post-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: userProfile2DB
+      username: JavaUser
+      password: root
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+
+jwt:
+  secretkey: ${secretkey}
+  audience: ${audience}
+  issuer: ${issuer}
+
+rabbitmq:
+  exchange: exchange
+  queueCreatePost: queue-post
+  bindingKeyCreatePost: binding-post

@@ -1,0 +1,39 @@
+server:
+  port: 8090
+
+
+spring:
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: auth-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/socialmediadb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+
+jwt:
+  secretkey: ${secretkey}
+  audience: ${audience}
+  issuer: ${issuer}
+
+rabbitmq:
+  exchange-auth: auth-exchange
+  registerKey: register-key
+  queueRegister: register-queue
+  registerMailQueue: mail-queue
+  registerMailBindingKey: mail-key

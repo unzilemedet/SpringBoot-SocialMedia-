@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.5.3.Final/dce418bedafd71ff8dd2cef15006c0fee788b073/mapstruct-processor-1.5.3.Final.jar" />
+        </processorPath>
+        <module name="SocialMedia.config-server-git.main" />
+        <module name="SocialMedia.post-service.main" />
+        <module name="SocialMedia.mail-service.main" />
+        <module name="SocialMedia.elastic-service.main" />
+        <module name="SocialMedia.main" />
+        <module name="SocialMedia.api-gateway-service.main" />
+        <module name="JavaProjects.SocialMedia.auth-service.main" />
+        <module name="com.bilgeadam.SocialMedia.userprofile-service.main" />
+        <module name="com.bilgeadam.SocialMedia.config-server.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>

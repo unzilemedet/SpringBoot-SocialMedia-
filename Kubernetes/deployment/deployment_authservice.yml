@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-authservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authservice
+  template:
+    metadata:
+      name: pod-authservice
+      labels:
+        app: authservice
+    spec:
+      containers:
+      - name: authservice-container
+        image: ardaagdemir/auth-server:v.1.0 
+        ports:
+        - containerPort: 8090
+        env:
+          - name: secretkey
+            value: "arda"
+          - name: audience
+            value: "bilgeadam"
+          - name: issuer
+            value: socialmedia
+          - name: config-url
+            value: "http://10.88.14.136:8889"

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-userprofileservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: userprofileservice
+  template:
+    metadata:
+      name: pod-userprofileservice
+      labels:
+        app: userprofileservice
+    spec:
+      containers:
+      - name: userprofileservice-container
+        image: ardaagdemir/userprofile-service:v.1.1
+        ports:
+        - containerPort: 8080
+        env:
+          - name: secretkey
+            value: "arda"
+          - name: audience
+            value: "bilgeadam"
+          - name: issuer
+            value: socialmedia
+          - name: config-url
+            value: "http://10.88.14.136:8889"
+          - name: redis-url
+            value: "10.88.3.90"

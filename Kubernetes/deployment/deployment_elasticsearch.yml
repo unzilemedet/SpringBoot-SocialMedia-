@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-elasticsearch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elasticsearch
+  template:
+    metadata:
+      name: pod-elasticsearch
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+      - name: elasticsearch-container
+        image: elasticsearch:7.17.10
+        ports:
+        - containerPort: 9200
+        - containerPort: 9300
+        env:
+        - name: ES_JAVA_OPTS
+          value: "-Xms512m -Xmx2048m"
+        - name: discovery.type
+          value: "single-node"
+        

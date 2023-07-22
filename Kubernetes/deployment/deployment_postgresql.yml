@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+#deployment objesinin isim ve etiket özellikleri
+metadata:
+  name: deployment-postgresql
+#deployment objesinin bütün özelliklerinin belirlendiği kısm
+spec:
+  #pod sayısı
+  replicas: 1
+  selector:
+    matchLabels:
+      database: postgresql
+  #podların özelliklerini içeren kısım
+  template: # == pods
+    metadata:
+      name: pod-postgresql
+      labels:
+        database: postgresql
+    spec:
+      containers:
+      - name: postgresql-container
+        image: postgres
+        ports:
+        - containerPort: 5432
+        env:
+          - name: POSTGRES_PASSWORD
+            value: "root"

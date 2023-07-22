@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-config-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: configserver
+  template:
+    metadata:
+      name: pod-config-server
+      labels:
+        app: configserver
+    spec:
+      containers:
+      - name: config-server-container
+        image: ardaagdemir/config-git-server:v.1.0
+        resources:
+          limits:
+            cpu: "100m"
+            memory: "1024Mi"
+        ports:
+        - containerPort: 8889
+        env:
+        - name: java7configpassword
+          value: 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
+
+        

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-postservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postservice
+  template:
+    metadata:
+      name: pod-postservice
+      labels:
+        app: postservice
+    spec:
+      containers:
+      - name: postservice-container
+        image: ardaagdemir/post-service:v.1.0
+        ports:
+        - containerPort: 8070
+        env:
+          - name: secretkey
+            value: "arda"
+          - name: audience
+            value: "bilgeadam"
+          - name: issuer
+            value: socialmedia
+          - name: config-url
+            value: "http://10.88.14.136:8889"

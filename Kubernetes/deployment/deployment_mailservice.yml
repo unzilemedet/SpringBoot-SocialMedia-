@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-mailservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mailservice
+  template:
+    metadata:
+      name: pod-mailservice
+      labels:
+        app: mailservice
+    spec:
+      containers:
+      - name: mailservice-container
+        image: ardaagdemir/mail-service:v.1.0
+        ports:
+        - containerPort: 8085
+        env:
+          - name: config-url
+            value: "http://10.88.14.136:8889"
+          - name: emailpassword
+            value: "xxvnkqjhenuozbhc"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/JavaProjects.SocialMedia.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/JavaProjects.SocialMedia.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/SocialMedia.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/SocialMedia.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server/SocialMedia.config-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server/SocialMedia.config-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/elastic-service/SocialMedia.elastic-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/elastic-service/SocialMedia.elastic-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mail-service/SocialMedia.mail-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mail-service/SocialMedia.mail-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userprofile-service/SocialMedia.userprofile-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/userprofile-service/SocialMedia.userprofile-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/com.bilgeadam.SocialMedia.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/com.bilgeadam.SocialMedia.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server/com.bilgeadam.SocialMedia.config-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server/com.bilgeadam.SocialMedia.config-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userprofile-service/com.bilgeadam.SocialMedia.userprofile-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/userprofile-service/com.bilgeadam.SocialMedia.userprofile-service.main.iml" />
+    </modules>
+  </component>
+</project>

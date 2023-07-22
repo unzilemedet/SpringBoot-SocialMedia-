@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-apigatewayservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apigatewayservice
+  template:
+    metadata:
+      name: pod-apigatewayservice
+      labels:
+        app: apigatewayservice
+    spec:
+      containers:
+      - name: apigatewayservice-container
+        image: ardaagdemir/api-gateway-service:v.1.0
+        ports:
+        - containerPort: 80
+        env:
+          - name: config-url
+            value: "http://10.88.14.136:8889"

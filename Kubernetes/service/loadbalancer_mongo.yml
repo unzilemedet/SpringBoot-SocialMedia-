@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: loadbalancer-mongodb
+spec:
+  selector:
+  #pod label ile aynı olması gerekir
+    database: mongodb
+  type: LoadBalancer
+  ports:
+    - name: mongodb
+  #node dışından gelecek isteğin ulaşacağı port
+      port: 27017
+  #dışarıdan gelen isteğin içeriye alındıktan sonra iletileceği port
+      targetPort: 27017

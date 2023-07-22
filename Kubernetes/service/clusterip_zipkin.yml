@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: clusterip-zipkin
+spec:
+  selector:
+  #pod label ile aynı olması gerekir
+    app: zipkin
+  type: ClusterIP
+  ports:
+    - name: zipkin
+      port: 9411
+      targetPort: 9411

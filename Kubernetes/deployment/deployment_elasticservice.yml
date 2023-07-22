@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-elasticervice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elasticervice
+  template:
+    metadata:
+      name: pod-elasticervice
+      labels:
+        app: elasticervice
+    spec:
+      containers:
+      - name: elasticervice-container
+        image: ardaagdemir/elastic-service:v.1.0 
+        ports:
+        - containerPort: 8075
+        env: 
+          - name: config-url
+            value: "http://10.88.14.136:8889"
